@@ -65,11 +65,13 @@
                 android:id="@+id/saveButon"
                 android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:text="SAVE"
                 android:backgroundTint="@color/purple_200"
+                android:gravity="center"
+                android:text="SAVE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/yearText"
-                tools:layout_editor_absoluteX="49dp"
-                tools:layout_editor_absoluteY="505dp"
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

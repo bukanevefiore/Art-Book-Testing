@@ -3,6 +3,7 @@
     package="com.examp.artbooktesting">
 
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
