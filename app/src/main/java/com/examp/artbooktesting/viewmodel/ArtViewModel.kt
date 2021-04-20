@@ -9,11 +9,9 @@ import com.examp.artbooktesting.model.ImageResponse
 import com.examp.artbooktesting.repo.ArtRepositoryInterface
 import com.examp.artbooktesting.roomdb.Art
 import com.examp.artbooktesting.util.Resource
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import java.net.URL
-import javax.inject.Inject
 
+//@HiltViewModel
 class ArtViewModel @ViewModelInject constructor(
         private val repository: ArtRepositoryInterface
 ) : ViewModel() {
