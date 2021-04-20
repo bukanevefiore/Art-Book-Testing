@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class ArtRepository @Inject constructor(
         private val artDao: ArtDao,
-        private val retrofitAPI: RetrofitAPI
+        private val retrofitApi: RetrofitAPI
 ) : ArtRepositoryInterface{
 
     override suspend fun insertAll(art: Art) {
@@ -29,7 +29,7 @@ class ArtRepository @Inject constructor(
 
         return try {
 
-            val response =retrofitAPI.imageSearch(imageString)
+            val response =retrofitApi.imageSearch(imageString)
             if(response.isSuccessful){
                 response.body()?.let {
                     return@let Resource.success(it)

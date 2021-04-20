@@ -18,20 +18,20 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="14dp"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/artRowNameText"
-        android:layout_width="wrap_content"
-        android:text="Art Name"
-        android:textSize="28sp"
-        android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
         <TextView
-        android:id="@+id/artRowArtistNameText"
-        android:layout_width="wrap_content"
-        android:text="Artist Name"
-        android:textSize="20sp"
-        android:layout_marginBottom="10dp"
-        android:layout_height="wrap_content"/>
+            android:id="@+id/artRowNameText"
+            android:layout_width="wrap_content"
+            android:text="Art Name"
+            android:textSize="28sp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/artRowArtistNameText"
+            android:layout_width="wrap_content"
+            android:text="Artist Name"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/artRowYearNameText"
             android:layout_width="wrap_content"

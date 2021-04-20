@@ -1,8 +1,13 @@
 package com.examp.artbooktesting.dependencyinjection
-
+import com.examp.artbooktesting.R
 import android.content.Context
 import androidx.room.Room
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.examp.artbooktesting.api.RetrofitAPI
+import com.examp.artbooktesting.repo.ArtRepository
+import com.examp.artbooktesting.repo.ArtRepositoryInterface
+import com.examp.artbooktesting.roomdb.ArtDao
 import com.examp.artbooktesting.roomdb.ArtDatabase
 import com.examp.artbooktesting.util.Util.BASE_URL
 import dagger.Module
@@ -38,4 +43,16 @@ object AppModule {
                 .build()
                 .create(RetrofitAPI::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun injectNormalRepo(dao: ArtDao, api:RetrofitAPI) = ArtRepository(dao,api) as ArtRepositoryInterface
+
+    @Singleton
+    @Provides
+    fun injectGlide(@ApplicationContext context: Context) = Glide.with(context)
+        .setDefaultRequestOptions(
+            RequestOptions().placeholder(R.drawable.ic_launcher_foreground)
+                .error(R.drawable.ic_launcher_foreground)
+        )
 }
