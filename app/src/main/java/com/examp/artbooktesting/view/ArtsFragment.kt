@@ -22,12 +22,13 @@ class ArtsFragment @Inject constructor(
     lateinit var viewModel : ArtViewModel
     private var fragmentBinding : FragmentArtsBinding? = null
 
-    // swipe
+    // swipe ile silme
     private val swipeCallback = object  : ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {
         override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
             return true
         }
 
+        // silme
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
             val layoutPosition = viewHolder.layoutPosition
             val selectedArt = artRecyclerAdapter.arts[layoutPosition]
