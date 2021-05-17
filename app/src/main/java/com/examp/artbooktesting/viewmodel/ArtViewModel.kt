@@ -69,7 +69,6 @@ class ArtViewModel @Inject constructor(
         inserArtMsg.postValue(Resource.success(art))
     }
 
-
     fun searchForImage(searcString: String) {
 
         if(searcString.isEmpty()){
